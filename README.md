@@ -1,8 +1,14 @@
 # Ansible Vault Extractor
 
+[![Python](https://img.shields.io/badge/python-3.6+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub stars](https://img.shields.io/github/stars/rut31337/ansible-extractor.svg)](https://github.com/rut31337/ansible-extractor/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/rut31337/ansible-extractor.svg)](https://github.com/rut31337/ansible-extractor/network)
+[![GitHub issues](https://img.shields.io/github/issues/rut31337/ansible-extractor.svg)](https://github.com/rut31337/ansible-extractor/issues)
+
 A Python utility to extract and decrypt Ansible vault-encrypted values from YAML files. This tool provides a simple way to access vault-protected variables without needing to write a full Ansible playbook.
 
-## Features
+## 🚀 Features
 
 - Extract and decrypt Ansible vault-encrypted values from YAML files
 - Multiple output formats: YAML, environment variables, or debug output
@@ -10,17 +16,17 @@ A Python utility to extract and decrypt Ansible vault-encrypted values from YAML
 - Simple command-line interface
 - Cross-platform compatibility
 
-## Prerequisites
+## 📋 Prerequisites
 
 - Python 3.6 or higher
 - Ansible installed and available in your PATH
 - Access to the vault password file
 
-## Installation
+## 🛠️ Installation
 
 1. Clone this repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/rut31337/ansible-extractor.git
 cd ansible-extractor
 ```
 
@@ -29,7 +35,7 @@ cd ansible-extractor
 chmod +x extract_vault_values.py
 ```
 
-## Usage
+## 📖 Usage
 
 ### Basic Usage
 
@@ -63,7 +69,7 @@ python extract_vault_values.py --yaml-file secrets.yml --vault-password-file vau
 - `--debug`: Show verbose ansible debug output
 - `--env`: Output as exported environment variables with uppercase keys
 
-## Examples
+## 💡 Examples
 
 ### Example 1: Basic Extraction
 ```bash
@@ -92,7 +98,7 @@ export API_KEY="sk-1234567890abcdef"
 source <(python extract_vault_values.py --yaml-file config/secrets.yml --vault-password-file .vault_pass --env)
 ```
 
-## How It Works
+## 🔧 How It Works
 
 The tool works by:
 
@@ -102,7 +108,7 @@ The tool works by:
 4. Filtering out Ansible internal variables
 5. Outputting the results in the requested format
 
-## Error Handling
+## ⚠️ Error Handling
 
 The tool includes comprehensive error handling for:
 - Missing input files
@@ -111,16 +117,26 @@ The tool includes comprehensive error handling for:
 - JSON parsing errors
 - General exceptions
 
-## Security Notes
+## 🔒 Security Notes
 
 - The vault password file should be kept secure and not committed to version control
 - Temporary files are automatically cleaned up after use
 - The tool only extracts non-Ansible internal variables
 
-## Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## License
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## ⭐ Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=rut31337/ansible-extractor&type=Date)](https://star-history.com/#rut31337/ansible-extractor&Date) 
